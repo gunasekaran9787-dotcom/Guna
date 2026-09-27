@@ -1,121 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gunasekaran T - Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3e9">
+  <meta name="description" content="Portfolio of Gunasekaran T, AI Automation Specialist and Mortgage SME.">
+  <title>Gunasekaran T — Portfolio</title>
   <link rel="stylesheet" href="Style.css">
+  <script>
+    document.documentElement.classList.add('js');
+  </script>
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Gunasekaran T, home">GT<span>.</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<!-- Bubble Navigation -->
-<nav class="nav">
-  <a href="#hero">Home</a>
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#skills">Skills</a>
-  <a href="#certifications">Certifications</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<!-- Page Container -->
-<div class="page-container">
-
-  <section class="page" id="hero">
-    <div class="content card">
-      <h1>Gunasekaran T</h1>
-      <p>AI Automation Specialist & Mortgage SME</p>
-      <div class="buttons">
-        <a href="Gunasekaran_T_Resume_v1_Mortgage_AI.pdf" class="btn">Resume (Mortgage + AI)</a>
-        <a href="Gunasekaran_T_Resume_v2_AI_Innovation.pdf" class="btn">Resume (AI Innovation)</a>
+  <main class="page-container">
+    <section class="page hero" id="home" aria-labelledby="home-title">
+      <div class="content card hero-card">
+        <p class="eyebrow">Portfolio</p>
+        <h1 id="home-title">Gunasekaran T</h1>
+        <p class="hero-subtitle">AI Automation Specialist <span aria-hidden="true">&amp;</span> US Mortgage SME</p>
+        <p class="hero-copy">Bringing mortgage operations expertise and practical AI together to improve how work gets done.</p>
+        <div class="buttons">
+          <a href="Gunasekaran_T_Resume_v1_Mortgage_AI.pdf" class="btn">Resume: Mortgage + AI <span aria-hidden="true">↗</span></a>
+          <a href="Gunasekaran_T_Resume_v2_AI_Innovation.pdf" class="btn btn-secondary">Resume: AI Innovation <span aria-hidden="true">↗</span></a>
+        </div>
+        <a class="text-link" href="#projects">Explore selected projects <span aria-hidden="true">↓</span></a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="page" id="about">
-    <div class="content card">
-      <h2>About Me</h2>
-      <p>7+ years in US Mortgage Operations with passion for AI-driven process improvement.</p>
-    </div>
-  </section>
-
-  <section class="page" id="projects">
-    <div class="content card">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="card">Web-based OCR Tool</div>
-        <div class="card">AI Quality Control Framework</div>
-        <div class="card">Automated Reporting Dashboards</div>
+    <section class="page" id="about" aria-labelledby="about-title">
+      <div class="content card">
+        <p class="eyebrow">Background</p>
+        <h2 id="about-title">About Me</h2>
+        <p class="lead">7+ years in US Mortgage Operations with a passion for AI-driven process improvement.</p>
+        <p>I combine hands-on operational knowledge with an interest in building useful, responsible automation that makes everyday workflows clearer and more efficient.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="page" id="skills">
-    <div class="content card">
-      <h2>Skills</h2>
-      <div class="grid">
-        <div class="card">US Mortgage Operations</div>
-        <div class="card">People Management</div>
-        <div class="card">AI Automation & Prompt Engineering</div>
-        <div class="card">MS Excel (Advanced)</div>
-        <div class="card">No-code AI Tool Development</div>
+    <section class="page" id="projects" aria-labelledby="projects-title">
+      <div class="content card content-wide">
+        <p class="eyebrow">Selected work</p>
+        <h2 id="projects-title">Projects</h2>
+        <div class="grid">
+          <article class="item-card"><span class="item-number">01</span><h3>Web-based OCR Tool</h3><p>Document text extraction concept for streamlining information capture.</p></article>
+          <article class="item-card"><span class="item-number">02</span><h3>AI Quality Control Framework</h3><p>A framework concept for applying AI to quality review workflows.</p></article>
+          <article class="item-card"><span class="item-number">03</span><h3>Automated Reporting Dashboards</h3><p>Reporting dashboards designed to make operational insights easier to access.</p></article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="page" id="certifications">
-    <div class="content card">
-      <h2>Certifications</h2>
-      <div class="grid">
-        <div class="card">M365 Copilot</div>
-        <div class="card">Agentic AI</div>
-        <div class="card">Context Engineering</div>
-        <div class="card">Generative AI</div>
-        <div class="card">Prompt Engineering</div>
+    <section class="page" id="skills" aria-labelledby="skills-title">
+      <div class="content card content-wide">
+        <p class="eyebrow">What I do</p>
+        <h2 id="skills-title">Skills</h2>
+        <div class="grid">
+          <article class="item-card"><span class="item-number">01</span><h3>US Mortgage Operations</h3></article>
+          <article class="item-card"><span class="item-number">02</span><h3>People Management</h3></article>
+          <article class="item-card"><span class="item-number">03</span><h3>AI Automation &amp; Prompt Engineering</h3></article>
+          <article class="item-card"><span class="item-number">04</span><h3>MS Excel (Advanced)</h3></article>
+          <article class="item-card"><span class="item-number">05</span><h3>Vibe Coder</h3></article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="page" id="contact">
-    <div class="content card">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:gunasekaran9787@gmail.com">gunasekaran9787@gmail.com</a></p>
-      <p>Phone: <a href="tel:+919787663159">+91-9787663159</a></p>
+    <section class="page" id="certifications" aria-labelledby="certifications-title">
+      <div class="content card content-wide">
+        <p class="eyebrow">Learning</p>
+        <h2 id="certifications-title">Certifications</h2>
+        <div class="grid">
+          <article class="item-card"><span class="item-number">01</span><h3>M365 Copilot</h3></article>
+          <article class="item-card"><span class="item-number">02</span><h3>Agentic AI</h3></article>
+          <article class="item-card"><span class="item-number">03</span><h3>Context Engineering</h3></article>
+          <article class="item-card"><span class="item-number">04</span><h3>Generative AI</h3></article>
+          <article class="item-card"><span class="item-number">05</span><h3>Prompt Engineering</h3></article>
+        </div>
       </div>
-  </section>
+    </section>
 
-</div>
+    <section class="page" id="contact" aria-labelledby="contact-title">
+      <div class="content card">
+        <p class="eyebrow">Let’s connect</p>
+        <h2 id="contact-title">Contact</h2>
+        <p class="lead">Have a project or opportunity in mind?</p>
+        <div class="contact-list">
+          <p><span>Email</span><a href="mailto:gunasekaran9787@gmail.com">gunasekaran9787@gmail.com</a></p>
+          <p><span>Phone</span><a href="tel:+919787663159">+91 97876 63159</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer class="footer">
-  <p>© 2026 Gunasekaran T | Portfolio</p>
-</footer>
+  <footer class="footer"><p>© <span id="year">2026</span> Gunasekaran T <span aria-hidden="true">·</span> Portfolio</p></footer>
 
-<script>
-  const navLinks = document.querySelectorAll('.nav a');
-  const pages = document.querySelectorAll('.page');
+  <script>
+    (() => {
+      const sections = [...document.querySelectorAll('.page')];
+      const links = [...document.querySelectorAll('.nav a')];
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let transitionTimer;
 
-  // set initial active page
-  document.querySelector('#hero').classList.add('active');
+      document.getElementById('year').textContent = new Date().getFullYear();
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href');
-      const targetPage = document.querySelector(targetId);
-      const currentPage = document.querySelector('.page.active');
+      function showSection(id, animate = true) {
+        const next = sections.find(section => section.id === id) || sections[0];
+        const current = sections.find(section => section.classList.contains('active'));
+        clearTimeout(transitionTimer);
+        if (current === next) return;
 
-      if (currentPage) {
-        currentPage.classList.add('peel');
-        setTimeout(() => {
-          currentPage.classList.remove('active', 'peel');
-          targetPage.classList.add('active');
-        }, 1000); // peel animation duration
-      } else {
-        targetPage.classList.add('active');
+        const finish = () => {
+          sections.forEach(section => {
+            const active = section === next;
+            section.classList.toggle('active', active);
+            section.classList.remove('leaving');
+            section.setAttribute('aria-hidden', String(!active));
+            if ('inert' in section) section.inert = !active;
+          });
+          links.forEach(link => {
+            const active = link.hash === `#${next.id}`;
+            if (active) link.setAttribute('aria-current', 'page');
+            else link.removeAttribute('aria-current');
+          });
+        };
+
+        if (current && animate && !reduceMotion.matches) {
+          current.classList.add('leaving');
+          transitionTimer = window.setTimeout(finish, 420);
+        } else {
+          finish();
+        }
       }
-    });
-  });
-</script>
 
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', event => {
+          const id = link.hash.slice(1);
+          if (!sections.some(section => section.id === id)) return;
+          event.preventDefault();
+          if (location.hash !== link.hash) history.pushState(null, '', link.hash);
+          showSection(id);
+        });
+      });
+
+      window.addEventListener('popstate', () => showSection(location.hash.slice(1), false));
+      window.addEventListener('hashchange', () => showSection(location.hash.slice(1), false));
+      showSection(location.hash.slice(1) || 'home', false);
+    })();
+  </script>
 </body>
 </html>
