@@ -8,20 +8,19 @@
 </head>
 <body>
 
-<!-- Navigation -->
+<!-- Bubble Navigation -->
 <nav class="nav">
-  <a href="#hero" class="hover-highlight">Home</a>
-  <a href="#about" class="hover-highlight">About</a>
-  <a href="#projects" class="hover-highlight">Projects</a>
-  <a href="#skills" class="hover-highlight">Skills</a>
-  <a href="#certifications" class="hover-highlight">Certifications</a>
-  <a href="#contact" class="hover-highlight">Contact</a>
+  <a href="#hero">Home</a>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <!-- Page Container -->
 <div class="page-container">
 
-  <!-- Hero -->
   <section class="page" id="hero">
     <div class="content card">
       <h1>Gunasekaran T</h1>
@@ -33,15 +32,13 @@
     </div>
   </section>
 
-  <!-- About -->
   <section class="page" id="about">
     <div class="content card">
       <h2>About Me</h2>
-      <p>I am a results-driven professional with 7+ years in US Mortgage Operations and a passion for AI-driven process improvement. I specialize in no-code AI tool creation using Microsoft Copilot, ChatGPT, Claude, and Google App Script.</p>
+      <p>7+ years in US Mortgage Operations with passion for AI-driven process improvement.</p>
     </div>
   </section>
 
-  <!-- Projects -->
   <section class="page" id="projects">
     <div class="content card">
       <h2>Projects</h2>
@@ -53,41 +50,38 @@
     </div>
   </section>
 
-  <!-- Skills -->
   <section class="page" id="skills">
     <div class="content card">
       <h2>Skills</h2>
-      <ul class="grid">
-        <li class="card">Mortgage Operations</li>
-        <li class="card">AI Automation & Prompt Engineering</li>
-        <li class="card">MS Excel (Advanced)</li>
-        <li class="card">Selenium Automation</li>
-        <li class="card">AutoHotkey Scripting</li>
-        <li class="card">No-code AI Tool Development</li>
-      </ul>
+      <div class="grid">
+        <div class="card">Mortgage Operations</div>
+        <div class="card">AI Automation & Prompt Engineering</div>
+        <div class="card">MS Excel (Advanced)</div>
+        <div class="card">Selenium Automation</div>
+        <div class="card">AutoHotkey Scripting</div>
+        <div class="card">No-code AI Tool Development</div>
+      </div>
     </div>
   </section>
 
-  <!-- Certifications -->
   <section class="page" id="certifications">
     <div class="content card">
       <h2>Certifications</h2>
-      <ul>
-        <li>M365 Copilot – Completed</li>
-        <li>Agentic AI – Completed</li>
-        <li>Context Engineering – Completed</li>
-        <li>Generative AI – Completed</li>
-        <li>Prompt Engineering – Completed</li>
-      </ul>
+      <div class="grid">
+        <div class="card">M365 Copilot</div>
+        <div class="card">Agentic AI</div>
+        <div class="card">Context Engineering</div>
+        <div class="card">Generative AI</div>
+        <div class="card">Prompt Engineering</div>
+      </div>
     </div>
   </section>
 
-  <!-- Contact -->
   <section class="page" id="contact">
     <div class="content card">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:gunasekaran9787@gmail.com" class="hover-highlight">gunasekaran9787@gmail.com</a></p>
-      <p>Phone: <a href="tel:+919787663159" class="hover-highlight">+91-9787663159</a></p>
+      <p>Email: <a href="mailto:gunasekaran9787@gmail.com">gunasekaran9787@gmail.com</a></p>
+      <p>Phone: <a href="tel:+919787663159">+91-9787663159</a></p>
       <p>Location: Dindigul, Tamil Nadu, India</p>
     </div>
   </section>
@@ -97,6 +91,33 @@
 <footer class="footer">
   <p>© 2026 Gunasekaran T | Portfolio</p>
 </footer>
+
+<script>
+  const navLinks = document.querySelectorAll('.nav a');
+  const pages = document.querySelectorAll('.page');
+
+  // set initial active page
+  document.querySelector('#hero').classList.add('active');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href');
+      const targetPage = document.querySelector(targetId);
+      const currentPage = document.querySelector('.page.active');
+
+      if (currentPage) {
+        currentPage.classList.add('peel');
+        setTimeout(() => {
+          currentPage.classList.remove('active', 'peel');
+          targetPage.classList.add('active');
+        }, 1000); // match peel animation duration
+      } else {
+        targetPage.classList.add('active');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
