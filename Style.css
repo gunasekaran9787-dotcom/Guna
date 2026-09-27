@@ -16,7 +16,7 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* Bubble Navigation */
+/* Bubble Navigation - Top Right */
 .nav {
   position: fixed;
   top: 1rem;
@@ -94,6 +94,7 @@ body {
   align-items: center;
   justify-content: center;
   transform-origin: top right;
+  padding-top: 6rem; /* ensures content clears nav bubbles */
 }
 
 .page.active {
@@ -122,4 +123,5 @@ body {
   padding: 1rem;
   background: transparent;
   color: #064E3B;
+  border-top: 1px solid rgba(6,78,59,0.2);
 }
