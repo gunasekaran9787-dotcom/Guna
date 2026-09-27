@@ -4,31 +4,102 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gunasekaran T - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <header id="home">
-    <h1>Gunasekaran T</h1>
-    <p>AI Automation Specialist & Mortgage SME</p>
-    <button onclick="window.location.href='resume.pdf'">Download Resume</button>
-  </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#resume">Resume</a>
-    <a href="#projects">Projects</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<!-- Hero Section -->
+<header class="bg-dark text-white text-center py-5">
+  <div class="container">
+    <h1 class="display-4">Gunasekaran T</h1>
+    <p class="lead">AI Automation Specialist & Mortgage SME</p>
+    <a href="Gunasekaran_T_Resume_v1_Mortgage_AI.pdf" class="btn btn-primary m-2">Download Resume (Mortgage + AI)</a>
+    <a href="Gunasekaran_T_Resume_v2_AI_Innovation.pdf" class="btn btn-success m-2">Download Resume (AI Innovation)</a>
+  </div>
+</header>
 
-  <section id="about">...</section>
-  <section id="resume">...</section>
-  <section id="projects">...</section>
-  <section id="certifications">...</section>
-  <section id="contact">...</section>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-  <footer>© 2026 Gunasekaran T</footer>
-  <script src="script.js"></script>
+<!-- About Section -->
+<section id="about" class="container py-5">
+  <h2 class="text-center mb-4">About Me</h2>
+  <p class="text-center">I am a results-driven professional with 7+ years in US Mortgage Operations and a passion for AI-driven process improvement. I specialize in no-code AI tool creation using Microsoft Copilot, ChatGPT, Claude, and Google App Script.</p>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="container py-5">
+  <h2 class="text-center mb-4">AI Projects</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Web-based OCR Tool</h5>
+          <p class="card-text">Extracts text from screenshots, enables keyword search, and tracks usage.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">AI Quality Control Framework</h5>
+          <p class="card-text">Reduced manual QA time by ~40% using prompt-based logic.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Automated Reporting Dashboards</h5>
+          <p class="card-text">Real-time SLA, productivity, and error tracking.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="container py-5">
+  <h2 class="text-center mb-4">Certifications</h2>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">M365 Copilot – Completed</li>
+    <li class="list-group-item">Agentic AI – Completed</li>
+    <li class="list-group-item">Context Engineering – Completed</li>
+    <li class="list-group-item">Generative AI – Completed</li>
+    <li class="list-group-item">Prompt Engineering – Completed</li>
+  </ul>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container py-5">
+  <h2 class="text-center mb-4">Contact</h2>
+  <p class="text-center">Email: <a href="mailto:gunasekaran9787@gmail.com">gunasekaran9787@gmail.com</a></p>
+  <p class="text-center">Phone: <a href="tel:+919787663159">+91-9787663159</a></p>
+  <p class="text-center">Location: Dindigul, Tamil Nadu, India</p>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p>© 2026 Gunasekaran T | Portfolio</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
