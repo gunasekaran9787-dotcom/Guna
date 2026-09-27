@@ -4,62 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gunasekaran T - Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Glassmorphism effect */
-    .glass {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    /* Gradient hover highlight */
-    .hover-highlight {
-      transition: all 0.3s ease;
-    }
-    .hover-highlight:hover {
-      background: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: bold;
-      transform: translateY(-2px);
-    }
-
-    /* Page container for horizontal slides */
-    .page-container {
-      display: flex;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-      width: 100vw;
-      height: 100vh;
-    }
-
-    .page {
-      flex: 0 0 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      transition: transform 1s ease-in-out;
-    }
-
-    /* Page flip animation */
-    .page-flip {
-      animation: flipPage 1s ease-in-out;
-    }
-
-    @keyframes flipPage {
-      from { transform: rotateY(90deg); opacity: 0; }
-      to { transform: rotateY(0deg); opacity: 1; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gradient-to-r from-slate-900 via-slate-800 to-teal-700 text-white font-sans">
+<body>
 
-<!-- Fixed Navigation (top-right) -->
-<nav class="fixed top-4 right-6 glass px-4 py-2 flex gap-4 text-sm font-semibold z-50">
+<!-- Navigation -->
+<nav class="nav">
   <a href="#hero" class="hover-highlight">Home</a>
   <a href="#about" class="hover-highlight">About</a>
   <a href="#projects" class="hover-highlight">Projects</a>
@@ -71,80 +21,71 @@
 <!-- Page Container -->
 <div class="page-container">
 
-  <!-- Hero Page -->
-  <section class="page glass page-flip" id="hero">
-    <div class="max-w-3xl mx-auto p-10 text-center">
-      <h1 class="text-5xl font-bold mb-4">Gunasekaran T</h1>
-      <p class="text-lg mb-6">AI Automation Specialist & Mortgage SME</p>
-      <div class="space-x-4">
-        <a href="Gunasekaran_T_Resume_v1_Mortgage_AI.pdf" class="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition">Resume (Mortgage + AI)</a>
-        <a href="Gunasekaran_T_Resume_v2_AI_Innovation.pdf" class="px-4 py-2 bg-green-600 rounded-lg hover:bg-green-700 transition">Resume (AI Innovation)</a>
+  <!-- Hero -->
+  <section class="page" id="hero">
+    <div class="content card">
+      <h1>Gunasekaran T</h1>
+      <p>AI Automation Specialist & Mortgage SME</p>
+      <div class="buttons">
+        <a href="Gunasekaran_T_Resume_v1_Mortgage_AI.pdf" class="btn">Resume (Mortgage + AI)</a>
+        <a href="Gunasekaran_T_Resume_v2_AI_Innovation.pdf" class="btn">Resume (AI Innovation)</a>
       </div>
     </div>
   </section>
 
-  <!-- About Page -->
-  <section class="page glass page-flip" id="about">
-    <div class="max-w-4xl mx-auto p-10 text-center">
-      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+  <!-- About -->
+  <section class="page" id="about">
+    <div class="content card">
+      <h2>About Me</h2>
       <p>I am a results-driven professional with 7+ years in US Mortgage Operations and a passion for AI-driven process improvement. I specialize in no-code AI tool creation using Microsoft Copilot, ChatGPT, Claude, and Google App Script.</p>
     </div>
   </section>
 
-  <!-- Projects Page -->
-  <section class="page glass page-flip" id="projects">
-    <div class="max-w-6xl mx-auto p-10">
-      <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="glass p-6 hover-highlight">
-          <h3 class="text-xl font-semibold mb-2">Web-based OCR Tool</h3>
-          <p>Extracts text from screenshots, enables keyword search, and tracks usage.</p>
-        </div>
-        <div class="glass p-6 hover-highlight md:row-span-2">
-          <h3 class="text-xl font-semibold mb-2">AI Quality Control Framework</h3>
-          <p>Reduced manual QA time by ~40% using prompt-based logic.</p>
-        </div>
-        <div class="glass p-6 hover-highlight">
-          <h3 class="text-xl font-semibold mb-2">Automated Reporting Dashboards</h3>
-          <p>Real-time SLA, productivity, and error tracking.</p>
-        </div>
+  <!-- Projects -->
+  <section class="page" id="projects">
+    <div class="content card">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">Web-based OCR Tool</div>
+        <div class="card">AI Quality Control Framework</div>
+        <div class="card">Automated Reporting Dashboards</div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Page -->
-  <section class="page glass page-flip" id="skills">
-    <div class="max-w-6xl mx-auto p-10 text-center">
-      <h2 class="text-3xl font-bold mb-6">Skills</h2>
-      <ul class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <li class="glass p-4 hover-highlight">Mortgage Operations</li>
-        <li class="glass p-4 hover-highlight">AI Automation & Prompt Engineering</li>
-        <li class="glass p-4 hover-highlight">MS Excel (Advanced)</li>
-        <li class="glass p-4 hover-highlight">Selenium Automation</li>
-        <li class="glass p-4 hover-highlight">AutoHotkey Scripting</li>
-        <li class="glass p-4 hover-highlight">No-code AI Tool Development</li>
+  <!-- Skills -->
+  <section class="page" id="skills">
+    <div class="content card">
+      <h2>Skills</h2>
+      <ul class="grid">
+        <li class="card">Mortgage Operations</li>
+        <li class="card">AI Automation & Prompt Engineering</li>
+        <li class="card">MS Excel (Advanced)</li>
+        <li class="card">Selenium Automation</li>
+        <li class="card">AutoHotkey Scripting</li>
+        <li class="card">No-code AI Tool Development</li>
       </ul>
     </div>
   </section>
 
-  <!-- Certifications Page -->
-  <section class="page glass page-flip" id="certifications">
-    <div class="max-w-4xl mx-auto p-10 text-center">
-      <h2 class="text-3xl font-bold mb-6">Certifications</h2>
-      <ul class="space-y-3">
-        <li class="hover-highlight">M365 Copilot – Completed</li>
-        <li class="hover-highlight">Agentic AI – Completed</li>
-        <li class="hover-highlight">Context Engineering – Completed</li>
-        <li class="hover-highlight">Generative AI – Completed</li>
-        <li class="hover-highlight">Prompt Engineering – Completed</li>
+  <!-- Certifications -->
+  <section class="page" id="certifications">
+    <div class="content card">
+      <h2>Certifications</h2>
+      <ul>
+        <li>M365 Copilot – Completed</li>
+        <li>Agentic AI – Completed</li>
+        <li>Context Engineering – Completed</li>
+        <li>Generative AI – Completed</li>
+        <li>Prompt Engineering – Completed</li>
       </ul>
     </div>
   </section>
 
-  <!-- Contact Page -->
-  <section class="page glass page-flip" id="contact">
-    <div class="max-w-4xl mx-auto p-10 text-center">
-      <h2 class="text-3xl font-bold mb-6">Contact</h2>
+  <!-- Contact -->
+  <section class="page" id="contact">
+    <div class="content card">
+      <h2>Contact</h2>
       <p>Email: <a href="mailto:gunasekaran9787@gmail.com" class="hover-highlight">gunasekaran9787@gmail.com</a></p>
       <p>Phone: <a href="tel:+919787663159" class="hover-highlight">+91-9787663159</a></p>
       <p>Location: Dindigul, Tamil Nadu, India</p>
@@ -153,8 +94,7 @@
 
 </div>
 
-<!-- Footer -->
-<footer class="text-center py-6 bg-slate-900">
+<footer class="footer">
   <p>© 2026 Gunasekaran T | Portfolio</p>
 </footer>
 
