@@ -151,6 +151,47 @@ h3 { margin: .45rem 0 .4rem; font-size: 1.08rem; }
 .btn-secondary:hover { background: rgba(255,255,255,.8); color: var(--ink); }
 .text-link { display: inline-block; margin-top: 1.5rem; color: var(--green); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 
+/* Recruiter-friendly employment summary */
+.experience {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,.58);
+}
+.experience-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.experience-heading h3 { margin: 0; font-size: 1.15rem; }
+.experience-total {
+  flex: 0 0 auto;
+  padding: .3rem .75rem;
+  border: 1px solid rgba(255,255,255,.56);
+  border-radius: 999px;
+  background: rgba(8,118,90,.12);
+  color: var(--ink);
+  font-size: .82rem;
+  font-weight: 750;
+}
+.experience-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; }
+.experience-item {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  gap: .8rem;
+  padding: 1rem;
+  border: 1px solid rgba(255,255,255,.48);
+  border-radius: 16px;
+  background: rgba(235,248,239,.30);
+  box-shadow: 0 8px 22px rgba(0,25,18,.08), inset 0 1px rgba(255,255,255,.32);
+}
+.experience-marker { flex: 0 0 auto; width: .62rem; height: .62rem; margin-top: .42rem; border: 2px solid #08765a; border-radius: 50%; box-shadow: 0 0 0 4px rgba(8,118,90,.12); }
+.experience-detail { min-width: 0; }
+.experience-detail h4 { margin: 0; color: var(--ink); font-size: .98rem; line-height: 1.4; overflow-wrap: anywhere; }
+.experience-duration { margin: .35rem 0 0; color: var(--ink-muted); font-size: .9rem; font-weight: 700; }
+
 /* Explicit grid sizing prevents nested .card styles from collapsing the items. */
 .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .item-card {
@@ -188,6 +229,7 @@ h3 { margin: .45rem 0 .4rem; font-size: 1.08rem; }
   .nav a { color: #f3fff8; }
   .page { min-height: 100svh; padding: 6.5rem 1rem 3.5rem; }
   .content { padding: 1.5rem; }
+  .experience-list { grid-template-columns: 1fr; }
   .hero-card { padding: 2rem 1.5rem; }
   .grid { grid-template-columns: 1fr; gap: .75rem; }
   .item-card { min-height: 0; padding: 1rem 1.1rem; }
