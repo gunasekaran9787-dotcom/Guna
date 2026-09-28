@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#739783">
   <meta name="description" content="Portfolio of Gunasekaran T, AI Automation Specialist and Mortgage SME.">
   <title>Gunasekaran T — Portfolio</title>
-  <link rel="stylesheet" href="Style.css?v=20260928-2">
+  <link rel="stylesheet" href="Style.css?v=20260929-2">
   <script>
     document.documentElement.classList.add('js');
   </script>
@@ -178,6 +178,85 @@
       window.addEventListener('popstate', () => showSection(location.hash.slice(1), false));
       window.addEventListener('hashchange', () => showSection(location.hash.slice(1), false));
       showSection(location.hash.slice(1) || 'home', false);
+    })();
+  </script>
+  <script>
+    (() => {
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (reducedMotion.matches) return;
+
+      const cards = document.querySelectorAll('.item-card');
+      const motion = new WeakMap();
+      let lastPointer = null;
+      let lastSpeed = 0;
+      let lastMoveAt = 0;
+
+      function playbackRate(speed) {
+        if (speed < 35) return 1;
+        return Math.min(3.4, Math.max(0.75, 0.75 + speed / 300));
+      }
+
+      function setRate(card, speed) {
+        const state = motion.get(card);
+        if (!state || !state.animation) return;
+        const rate = playbackRate(speed);
+        if (typeof state.animation.updatePlaybackRate === 'function') {
+          state.animation.updatePlaybackRate(rate);
+        } else {
+          state.animation.playbackRate = rate;
+        }
+      }
+
+      document.addEventListener('pointermove', event => {
+        if (event.pointerType === 'touch') return;
+        const now = performance.now();
+        if (lastPointer && now > lastPointer.time) {
+          const distance = Math.hypot(event.clientX - lastPointer.x, event.clientY - lastPointer.y);
+          lastSpeed = distance / ((now - lastPointer.time) / 1000);
+        }
+        lastPointer = { x: event.clientX, y: event.clientY, time: now };
+        lastMoveAt = now;
+
+        const card = event.target instanceof Element ? event.target.closest('.item-card') : null;
+        const state = card && motion.get(card);
+        if (!state) return;
+        clearTimeout(state.idleTimer);
+        setRate(card, lastSpeed);
+        state.idleTimer = window.setTimeout(() => setRate(card, 0), 180);
+      }, { passive: true });
+
+      cards.forEach(card => {
+        card.addEventListener('pointerenter', event => {
+          if (event.pointerType === 'touch' || motion.has(card)) return;
+          card.classList.add('is-spinning');
+          const entrySpeed = performance.now() - lastMoveAt < 140 ? lastSpeed : 0;
+          const state = { animation: null, idleTimer: 0 };
+          motion.set(card, state);
+
+          requestAnimationFrame(() => {
+            const animation = card.getAnimations().find(item => item.animationName === 'itemCardMultiSpin');
+            if (!animation) return;
+            state.animation = animation;
+            setRate(card, entrySpeed);
+            state.idleTimer = window.setTimeout(() => setRate(card, 0), 180);
+          });
+        });
+
+        card.addEventListener('animationend', event => {
+          if (event.animationName !== 'itemCardMultiSpin') return;
+          const state = motion.get(card);
+          if (state) clearTimeout(state.idleTimer);
+          motion.delete(card);
+          card.classList.remove('is-spinning');
+        });
+
+        card.addEventListener('pointerleave', () => {
+          const state = motion.get(card);
+          if (!state) return;
+          clearTimeout(state.idleTimer);
+          setRate(card, 0);
+        });
+      });
     })();
   </script>
 </body>
